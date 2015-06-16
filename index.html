@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<title>Loom Table Example</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script data-main="/js/app" src="js/require.js"></script>
+		<link type="text/css" href="css/style.css" rel="stylesheet"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	</head>
+	<body>
+		<div class="main">
+			<h1>Javascript library for sorting & filtering tables</h1>
+			<section>
+				<h2>Table</h2>
+				<p>
+					<label for="filter">Search By Name</label>
+					<input type="text" id="filter"/>
+				</p>
+				<p>
+					<label for="employee">Only show Employees?</label>
+					<input type="checkbox" id="employee"/>
+				</p>
+				<table id="table" class="responsive-table">
+					<thead>
+						<tr>
+							<th data-field="name">Name</th>
+							<th data-field="age" data-type="number">Age</th>
+							<th data-field="occupation" data-type="input">Occupation</th>
+							<th data-field="dob" data-type="date">DOB</th>
+							<th data-field="link">Link to Website</th>
+							<th data-field="employee">Is Employee?</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-field="name">JD</td>
+							<td data-field="age" data-type="number">29</td>
+							<td data-field="occupation" data-type="input"><input type="text"/></td>
+							<td data-field="dob" data-type="date" data-format="dd/mm/yyyy">12/12/1980</td>
+							<td data-field="link"><a href="#">www.jd.com</a></td>
+							<td data-field="employee"><input type="checkbox" checked/></td>
+						</tr>
+						<tr>
+							<td data-field="name">Marcus</td>
+							<td data-field="age" data-type="number">25</td>
+							<td data-field="occupation" data-type="input"><input type="text"/></td>
+							<td data-field="dob" data-type="date" data-format="dd/mm/yyyy">23/08/1989</td>
+							<td data-field="link"><a href="#">www.marcus.com</a></td>
+							<td data-field="employee"><input type="checkbox" checked/></td>
+						</tr>
+						<tr>
+							<td data-field="name">Tom</td>
+							<td data-field="age" data-type="number">27</td>
+							<td data-field="occupation" data-type="input"><input type="text"/></td>
+							<td data-field="dob" data-type="date" data-format="dd/mm/yyyy">14/02/1987</td>
+							<td data-field="link"><a href="#">www.tom.com</a></td>
+							<td data-field="employee"><input type="checkbox"/></td>
+						</tr>
+						<tr>
+							<td data-field="name">Kev</td>
+							<td data-field="age" data-type="number">30</td>
+							<td data-field="occupation" data-type="input"><input type="text"/></td>
+							<td data-field="dob" data-type="date" data-format="dd/mm/yyyy">12/12/1980</td>
+							<td data-field="link"><a href="#">www.kev.com</a></td>
+							<td data-field="employee"><input type="checkbox"/></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Total</td>
+							<td/>
+							<td/>
+							<td/>
+							<td/>
+							<td/>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+			<section>
+				<h2>Generic Wrapper</h2>
+				<p>
+					<label for="filter">Search By Name</label>
+					<input type="text" id="filter-products"/>
+				</p>
+				<select id="sort">
+					<option value="name-A">Name Ascending</option>
+					<option value="name-D">Name Descending</option>
+					<option value="price-A">Price Ascending</option>
+					<option value="price-D">Price Descending</option>
+					<option value="available-A">Available Ascending</option>
+					<option value="available-D">Available Descending</option>
+				</select>
+				<ul id="products">
+					<li>
+						<div>
+							<span>Name:</span>
+							<span data-field="name">Product 1</span>
+						</div>
+						<div>
+							<span>Price:</span>
+							<span data-field="price">£12.00</span>
+						</div>
+						<div>
+							<span>Available Till:</span>
+							<span data-field="available" data-type="date">16/07/2015</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>Name:</span>
+							<span data-field="name">Another Product</span>
+						</div>
+						<div>
+							<span>Price:</span>
+							<span data-field="price">£3.00</span>
+						</div>
+						<div>
+							<span>Available Till:</span>
+							<span data-field="available" data-type="date">18/06/2015</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>Name:</span>
+							<span data-field="name">Third Product</span>
+						</div>
+						<div>
+							<span>Price:</span>
+							<span data-field="price">£12.50</span>
+						</div>
+						<div>
+							<span>Available Till:</span>
+							<span data-field="available" data-type="date">15/06/2015</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<span>Name:</span>
+							<span data-field="name">And Another</span>
+						</div>
+						<div>
+							<span>Price:</span>
+							<span data-field="price">£2.00</span>
+						</div>
+						<div>
+							<span>Available Till:</span>
+							<span data-field="available" data-type="date">16/06/2015</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+</html>
