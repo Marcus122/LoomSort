@@ -13,6 +13,7 @@ data-type = Type of the field eg number,string,date
 data-format - For data-type="date", format of date eg dd/mm/yyyy
 
 Config can be used to create own getValue functions - for example to extract text in a html element
+```javascript
 {
   fields:{
     link:{
@@ -22,8 +23,10 @@ Config can be used to create own getValue functions - for example to extract tex
     }
   }
 }
+```
 
 Config can also be used to specify types or filter functions
+```javascript
 {
   fields{
     isEmployee:{
@@ -36,4 +39,4 @@ Config can also be used to specify types or filter functions
     }
   }
 }
-
+```
