@@ -14,7 +14,7 @@ Data attributes are:
 
 Config can be used to create own getValue functions - for example to extract text in a html element
 ```javascript
-{
+config ={
   fields:{
     link:{
       getValue:function($el){
@@ -27,7 +27,7 @@ Config can be used to create own getValue functions - for example to extract tex
 
 Config can also be used to specify types or filter functions
 ```javascript
-{
+config ={
   fields{
     isEmployee:{
       filter:function($el,value){
