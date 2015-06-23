@@ -55,7 +55,7 @@ define(["jquery","./Datasource"],function($,Datasource){
 			sort(field,sortBy);
 		}
 		function setEvents(){
-			$table.on("click","thead th",function(){
+			$table.off("click.loomSort").on("click.loomSort","thead th",function(){
 				doSort($(this));
 			});
 		}
@@ -81,11 +81,15 @@ define(["jquery","./Datasource"],function($,Datasource){
 		function reset(){
 			draw(datasource.getRows());
 		}
+		function clear(){
+			datasource=null;
+		}
 		
 		return {
 			sort:sort,
 			filter:filter,
-			reset:reset
+			reset:reset,
+			clear:clear
 		}
 	}
 });

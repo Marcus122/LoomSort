@@ -43,11 +43,15 @@ define(["jquery","./Datarow"],function($,Datarow){
 				return row.filter(field,value);
 			});
 		}
+		function clear(){
+			rows=[];
+		}
 		return {
 			addRow:addRow,
 			sort:sort,
 			getRows:getRows,
-			filter:filter
+			filter:filter,
+			clear:clear
 		}
 	};
 });
