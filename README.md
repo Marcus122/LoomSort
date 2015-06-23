@@ -8,9 +8,9 @@ Includes two wrappers - a generic container wrapper and a table wrapper.
 Can either create with html data attributes or config passed into the constructor. 
 
 Data attributes are:
-data-field = The field name. eg Name
-data-type = Type of the field eg number,string,date
-data-format - For data-type="date", format of date eg dd/mm/yyyy
+* data-field = The field name. eg Name
+* data-type = Type of the field eg number,string,date
+* data-format - For data-type="date", format of date eg dd/mm/yyyy
 
 Config can be used to create own getValue functions - for example to extract text in a html element
 ```javascript
